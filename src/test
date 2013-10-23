@@ -1,0 +1,33 @@
+def chess(piece,m,n):
+    if piece == 'K':
+        return king(m,n)
+    elif piece == 'k':
+        return knight(m,n)
+    elif piece == 'Q' or piece == 'r':
+        return rook_queen(m,n)
+def div(num):
+    if num % 2 == 1:
+        return (num + 1) / 2
+    else:
+        return num / 2
+def rook(m,n):
+    if m < n:
+        return m
+    else:
+        return n
+def queen(m,n):
+    if m < n:
+        return m
+    else:
+        return n
+def rook_queen(m,n):
+    if m < n:
+        return m
+    else:
+        return n
+def king(m,n):
+    return div(m) * div(n)
+def knight(m,n):
+    return div(m) * n
+
+print(chess('Q', 8, 8))
